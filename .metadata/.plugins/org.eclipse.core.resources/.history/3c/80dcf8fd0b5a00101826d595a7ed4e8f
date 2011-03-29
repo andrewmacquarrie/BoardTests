@@ -1,0 +1,43 @@
+package com.awsmnss.boardtest;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+import android.app.Activity;
+import android.app.TabActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TabHost;
+import android.widget.ToggleButton;
+
+public class BoardTest extends TabActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);   
+
+        TabHost mTabHost = getTabHost();
+        
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test1").setIndicator("TAB 1").setContent(R.id.textview1));
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("TAB 2").setContent(R.id.textview2));
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("TAB 3").setContent(R.id.textview3));
+        
+        mTabHost.setCurrentTab(0);
+    }
+    
+    public void toggleOutput(View view) {
+    	boolean on = ((ToggleButton)view).isChecked();
+    	write(on, (String)view.getTag());
+    }
+
+    private void write(boolean toState, String output){
+    	try{
+    		FileWriter fstream = new FileWriter("/proc/k8055/0/out"+output,true);
+    		BufferedWriter out = new BufferedWriter(fstream);
+    		out.write(toState ? "1" : "0");
+    		 out.close();
+    	}catch (Exception e){
+    		System.err.println("Error: " + e.getMessage());
+    	}
+    }
+}

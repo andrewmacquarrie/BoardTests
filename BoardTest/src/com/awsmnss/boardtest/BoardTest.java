@@ -1,0 +1,62 @@
+package com.awsmnss.boardtest;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+import com.awsmnss.boardtest.HorizontalSlider.OnProgressChangeListener;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ToggleButton;
+import android.view.Window;
+
+public class BoardTest extends Activity {
+
+	private HorizontalSlider slider;
+	
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_PROGRESS);
+        setContentView(R.layout.main);
+        setProgressBarVisibility(true);
+
+        slider = (HorizontalSlider) this.findViewById(R.id.slider);
+        slider.setOnProgressChangeListener(changeListener);
+    }
+
+	private OnProgressChangeListener changeListener = new OnProgressChangeListener() {
+        public void onProgressChanged(View v, int progress) {
+        	setProgress(progress);
+        	analogOut(new Integer(progress),"1");
+        }
+	};
+    
+    public void toggleOutput(View view) {
+    	boolean on = ((ToggleButton)view).isChecked();
+    	digitalOut(on, (String)view.getTag());
+    }
+
+    private void digitalOut(boolean toState, String output){
+    	try{
+    		FileWriter fstream = new FileWriter("/proc/k8055/0/out"+output,true);
+    		BufferedWriter out = new BufferedWriter(fstream);
+    		out.write(toState ? "1" : "0");
+    		 out.close();
+    	}catch (Exception e){
+    		System.err.println("Error: " + e.getMessage());
+    	}
+    }
+    
+    private void analogOut(Integer outputLevel, String output){
+    	try{
+    		FileWriter fstream = new FileWriter("/proc/k8055/0/dac"+output,true);
+    		BufferedWriter out = new BufferedWriter(fstream);
+    		out.write(outputLevel.toString());
+    		 out.close();
+    	}catch (Exception e){
+    		System.err.println("Error: " + e.getMessage());
+    	}
+    }
+}

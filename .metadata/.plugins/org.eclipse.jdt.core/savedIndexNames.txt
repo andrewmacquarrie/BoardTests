@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/drew/projects/eclipse/.metadata/.plugins/org.eclipse.jdt.core
+4209220997.index
+818052984.index

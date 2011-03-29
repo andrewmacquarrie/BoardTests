@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;com.awsmnss.boardtest.BoardTest.write(...)&apos; to &apos;digitalOut&apos;&#x0A;- Original project: &apos;BoardTest&apos;&#x0A;- Original element: &apos;com.awsmnss.boardtest.BoardTest.write(...)&apos;&#x0A;- Renamed element: &apos;com.awsmnss.boardtest.BoardTest.digitalOut(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;write&apos;" flags="589826" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;com.awsmnss.boardtest{BoardTest.java[BoardTest~write~Z~QString;" name="digitalOut" references="true" stamp="1301410183461" version="1.0"/>
+</session>

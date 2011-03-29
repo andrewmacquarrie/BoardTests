@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="1"android:textOff="Switch On"
+	 android:textOn="Switch Off"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="2"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="3"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="4"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="5"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="6"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="7"
+     android:onClick="toggleOutput" />
+<ToggleButton
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:tag="8"
+     android:onClick="toggleOutput" />
+</LinearLayout>

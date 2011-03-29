@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, BoardTest!</string>
+    <string name="app_name">Testing the board</string>
+    <string name="oneOn">1 on</string>
+    <string name="twoOn">2 on</string>
+    <string name="ThreeOn">3 on</string>
+</resources>

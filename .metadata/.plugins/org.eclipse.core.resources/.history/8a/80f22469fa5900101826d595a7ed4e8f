@@ -1,0 +1,35 @@
+package com.awsmnss.boardtest;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+
+public class BoardTest extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);   
+    }
+    
+    public void setOne(View view) {
+    	try{
+    		// Create file 
+    		FileWriter fstream = new FileWriter("/proc/k8055/0/out0",true);
+    		BufferedWriter out = new BufferedWriter(fstream);
+    		out.write("1");
+    		 out.close();
+    	}catch (Exception e){//Catch exception if any
+    		System.err.println("Error: " + e.getMessage());
+    	}
+    }
+    
+    public void setTwo(View view) {
+    }
+    
+    public void setThree(View view) {
+    }
+}
