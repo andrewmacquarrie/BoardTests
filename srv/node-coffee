@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+puts "Compiling coffee..."
+Dir["./coffee/*.coffee"].each do |cs|
+  system "coffee --compile --bare --output . #{cs}"
+end
+puts "Executing node"
+system "node server.js"
