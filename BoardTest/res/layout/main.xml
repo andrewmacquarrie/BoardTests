@@ -12,6 +12,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="1"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -19,6 +20,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="2"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -26,6 +28,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="3"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -33,6 +36,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="4"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -46,6 +50,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="5"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -53,6 +58,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="6"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -60,6 +66,7 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="7"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
@@ -67,15 +74,28 @@
 	<ToggleButton
 	     android:layout_height="wrap_content"
 	     android:layout_width="wrap_content"
+	     android:layout_margin="2dip"
 	     android:tag="8"
 	     android:textOff="Switch On"
 		 android:textOn="Switch Off"
 	     android:onClick="toggleOutput" />
 	</LinearLayout>
-<com.awsmnss.boardtest.HorizontalSlider
+<SeekBar
                 android:id="@+id/slider"
-                android:layout_width="250dip"
-                android:layout_height="20dip"
-                android:max="254"
-                android:layout_centerHorizontal="true" />
+                android:layout_width="300dip"
+                android:layout_height="30dip"
+				android:max="254"
+				android:layout_margin="20dip"
+                android:layout_centerHorizontal="true" android:layout_gravity="center_horizontal"/>
+                
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="horizontal" android:gravity="center_horizontal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content">
+		<ImageView android:tag="1" android:layout_margin="20dip" android:id="@+id/di1" android:layout_width="16px" android:layout_height="16px" android:src="@drawable/bullet_red" />
+		<ImageView android:tag="2" android:layout_margin="20dip" android:id="@+id/di2" android:layout_width="16px" android:layout_height="16px" android:src="@drawable/bullet_red" />
+		<ImageView android:tag="3" android:layout_margin="20dip" android:id="@+id/di3" android:layout_width="16px" android:layout_height="16px" android:src="@drawable/bullet_red" />
+		<ImageView android:tag="4" android:layout_margin="20dip" android:id="@+id/di4" android:layout_width="16px" android:layout_height="16px" android:src="@drawable/bullet_red"/>
+		<ImageView android:tag="5" android:layout_margin="20dip" android:id="@+id/di5" android:layout_width="16px" android:layout_height="16px" android:src="@drawable/bullet_red" />
+	</LinearLayout>
 </LinearLayout>
